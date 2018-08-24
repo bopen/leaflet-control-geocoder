@@ -11,6 +11,7 @@ import Mapzen from './geocoders/mapzen';
 import ArcGis from './geocoders/arcgis';
 import HERE from './geocoders/here';
 import Neutrino from './geocoders/neutrino';
+import OpenLocationCode from './geocoders/open-location-code';
 
 var Geocoder = L.Util.extend(Control.class, {
   Nominatim: Nominatim.class,
@@ -38,7 +39,11 @@ var Geocoder = L.Util.extend(Control.class, {
   HERE: HERE.class,
   here: HERE.factory,
   Neutrino: Neutrino.class,
-  neutrino: Neutrino.factory
+  neutrino: Neutrino.factory,
+  OpenLocationCode: OpenLocationCode.class,
+  openLocationCode: OpenLocationCode.factory,
+  PlusCodes: OpenLocationCode.class,
+  plusCodes: OpenLocationCode.factory
 });
 
 export default Geocoder;
